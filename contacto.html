@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF8">
+<title>Formulario de contacto</title>
+</head>
+<body>
+<form action="mailto:mario.bocos@gmail.com" method="post">
+	<fieldset>
+	<legend>Formulario de contacto</legend>
+	<p>Nombre: <input type="text" name="nombre"/></p>
+	<p>Email: <input type="text" name="nombre" /></p>
+	<p>Motivo de la consulta<br>
+		<input type="radio" name="motivo" value="evaluacion" />Evaluación<br>
+		<input type="radio" name="motivo" value="sugerencias" />Sugerencias<br>
+		<input type="radio" name="motivo" value="criticas" />Críticas
+	</p>
+	<p>
+		<input type="checkbox" name="terminos" value="terminos" />Marque esta casilla para verificar que ha leído nuestros términos y condiciones del servicio
+	</p>
+	<p>Escriba la consulta aquí:<br>
+		<textarea name="area" rows="5" cols="50"></textarea>
+	</p>
+	<button type="submit" value="Enviar" />Enviar</button>
+	<button type="reset" value="Reset" />Reset</button>
+	</fieldset>
+</form>
+</body>
+</html>
