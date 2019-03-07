@@ -1,0 +1,15 @@
+table {
+	text-align: center;
+	background: #C0C0C0;
+	margin: auto;
+	border: 2px #808000 dashed;
+	border-radius: 15px;
+}
+td {
+	padding: 15px;	
+}
+td.tituloColumna {
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #F0F0F0;
+}
