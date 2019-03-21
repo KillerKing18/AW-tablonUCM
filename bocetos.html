@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>Bocetos</title>
 	<!--Hemos incluido CSS para ajustar el tamaño por defecto de las imágenes y relacionar imagen-descripción mejor. -->
-	<link rel="stylesheet" type="text/css" href="css/bocetos.css">
 
 </head>
 <body>
@@ -18,16 +17,61 @@
 	<header>
 		<h1>BOCETOS</h1>
 	</header>
-	<div>
-		<img src="img/logo.jpg" alt="pantalla inicial"  
-		>
-		<p>Esta es la pantalla inicial que se ve nada más entrar en la web. Arriba a la derecha podemos encontrar las opciones de "log in" y "registro". En el centro se encuentra nuestro logo. </p>
-		<img src="img/signin.jpg" alt="registro">
-		<p>En esta página aparece el formulario de registro para crearte una cuenta en nuestra web.</p>
-		<img src="img/login.jpg" alt="log in">
-		<p>En esta página se muestran las redes sociales de la página y el formulario para "log in". También podremos cambiar el idioma. Arriba a la derecha se podrá ver la hora y fecha actual.</p>
-		<img src="img/bocetoAfterLogin.png" alt="una vez logeado">
-		<p>Una vez te has registrado podrás ver una foto de tu facultad. Arriba a la derecha podrás pinchar y acceder a tu perfil donde podrás ver y cambiar tus datos. Además, podrás seleccionar el curso que quieras y al pinchar sobre el se desplegarán una lista de las asignaturas que hayas elegido como "favoritas" y podrás entrar para ver/subir/descargar diferentes apuntes. A la derecha se tendrá un calendario de eventos.</p>
+	<div id = "Diseño">
+		<h2>Diseño</h2>
+		<img src="img/tablónUCMLogo.png" alt="Logo">
+		<p>Este será el logo de nuestra página web.</p>
+		<img src="img/Cabecera_y_Pie.png" alt="Cabecera y pie de página">
+		<p>Usaremos esta cabecera y este pie de página para que los usuarios puedan navegar fácilmente entre las distintas secciones de la página. Cada emoticono será un botón con el que podremos acceder a cada sección, menos el de "Perfil", que al hacer click sobre él se mostrará un desplegable con las opciones de "Configuración" y "Logout". Puedes ver el desplegable <a href="#Mis_apuntes">aquí</a>.</p>
+	</div>
+	<div id = "Portada">
+		<h2>Portada</h2>
+		<img src="img/Log_In.png" alt="Log In">
+		<img src="img/Sign_In.png" alt="Sign In">
+		<p>Estas serán las páginas que el usuario verá nada más acceder a nuestra web. Aquí podrá tanto iniciar sesión como registrarse. Al hacer click en las pestañas de arriba podrá cambiar entre "Log In" y "Sign In".</p>
+		<img src="img/Pagina_Principal_After_Login.png" alt="Home">
+		<p>Esta será la página principal una vez hayamos iniciado la sesión. Desde aquí podremos acceder a cualquier sección de la página. Esta página en concreto tendrá una cabecera distinta.</p>
+	</div>
+	<div id = "Mis_apuntes">
+		<h2>Mis apuntes</h2>
+		<img src="img/Mis_apuntes.png" alt="Mis apuntes">
+		<p>En esta sección el usuario podrá ver sus asignaturas marcadas. También podrá desmarcar cualquiera de las asignaturas con el icono de la papelera. Al hacer click sobre cualquiera de estas asignaturas, se accederá a los resultados de esa asignatura en el buscador. El usuario también podrá consultar los archivos que ha subido y acceder a ellos para editarlos o eliminarlos.</p>
+	</div>
+	<div id = "Buscar_apuntes">
+		<h2>Buscar apuntes</h2>
+		<p>Esta es la sección principal de nuestra página. Aquí los usuarios podrán buscar apuntes según distintos filtros.<p>
+		<img src="img/Buscador_Inicio.png" alt="Inicio del buscador">
+		<p>En esta primera página los usuarios podrán buscar archivos utilizando los filtros de "Facultad", "Grado", "Curso" y "Asignatura". Una vez el usuario ha seleccionado una facultad, se habilitará el siguiente selector con los grados disponibles para la facultad en concreto y así sucesivamente hasta seleccionar una asignatura.</p>
+		<img src="img/Buscador_Resultado.png" alt="Resultado de una búsqueda">
+		<p>Una vez la ha seleccionado y ha pulsado en "Buscar", se mostrarán las disitntas carpetas de la asignatura seleccionada clasificados por las categorías "Exámenes", "Ejercicios", "Teoría" y "Prácticas". Aquí también podremos marcar la asigntura para que el usuario pueda acceder a ella en la sección <a href="#Mis_apuntes">"Mis apuntes"</a>.</p>
+		<img src="img/Buscador_Archivos.png" alt="Archivos de una asignatura">
+		<img src="img/Buscador_Archivo_Previsualizado.png" alt="Archivo previsualizado">
+		<p>Cuando pulsemos en alguna de las carpetas accederemos a ella y podremos ver los archivos que contiene y sus detalles (podremos acceder también al <a href="#Perfiles">perfil</a> del usuario que ha subido el archivo). Estos archivos se podrán descargar o previsualizar con los dos iconos a la derecha de cada archivo.</p>
+		<img src="img/Buscador_Archivo_Seleccionado.png" alt="Página de un archivo">
+		<p>Cuando el usuario haga click sobre un archivo, se abrirá otra página con la información del mismo. Podremos también descargarlo, valorarlo, acceder al perfil de su autor y consultar las observaciones del autor y los comentarios. Si el usuario que está viendo el archivo es el propietario (habrá podido acceder fácilmente a través de "Archivos subidos" en la sección <a href="#Mis_apuntes">"Mis apuntes"</a> o desde el buscador), este tendrá las opciones de editarlo y borrarlo.</p>
+	</div>
+	<div id="Subir_material">
+		<h2>Subir material</h2>
+		<img src="img/Subir_material.png" alt="Subir material">
+		<p>En esta sección los usuarios podrán subir archivos clasificándolos según su facultad, grado, curso, asignatura y categoría. También podrán realizar obersavaciones para que las vean los demás usuarios. Sólo se podrá subir un único archivo, si se necesitan subir más, deberá hacerse mediante un archivo comprimido.</p>
+	</div>
+	<div id="Eventos">
+		<h2>Eventos</h2>
+		<img src="img/Eventos.png" alt="Eventos">
+		<img src="img/Evento_seleccionado.png" alt="Evento seleccionado">
+		<p>En esta sección podremos ver los próximos eventos disponibles, ver aquellos próximos eventos a los que te has apuntado y crear un evento. Al hacer click en un evento podremos ver toda su información, acceder al perfil del creador de ese evento, apuntarnos o desapuntarnos y editarlo en el caso de que seamos el creador del evento.</p>
+	</div>
+	<div id="Perfiles">
+		<h2>Perfiles</h2>
+		<img src="img/Perfil_propio.png" alt="Perfil propio">
+		<p>Al irnos a la sección "Perfil", podremos ver la información de nuestra cuenta, cambiar nuestra foto o nuestra contraseña y ver la valoración que han hecho sobre nosotros otros usuarios.</p>
+		<img src="img/Perfil_ajeno.png" alt="Perfil ajeno">
+		<p>Podremos acceder al perfil de otro usuario desde distintas secciones de nuestra página, como la de "Eventos" o la de "Buscar apuntes". En esta página podremos ver los archivos que ha subido este usuario, los eventos que ha creado y valorarlo con una puntuación de 1 a 5 estrellas.</p>
+	</div>
+	<div id="Administrar">
+		<h2>Administrar</h2>
+		<img src="img/Administrar.png" alt="Administrar">
+		<p>El administrador tendrá una sección adicional en la que podrá visualizar los últimos archivos subidos y eventos creados, así como eliminarlos. Además, al navegar por la página como cualquier otro usuario, será capaz de eliminar evento o archivos con botones adicionales.</p>
 	</div>
 </body>
 </html>
