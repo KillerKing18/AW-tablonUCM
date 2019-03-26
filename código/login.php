@@ -32,10 +32,10 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
 			?>
 		</div>
 		<div id="Registro" class="tabcontent">
-		<?php
-		$formularioRegistro = new FormularioRegistro("form-registro");
-		$formularioRegistro->gestiona();
-		?>
+			<?php
+			$formularioRegistro = new FormularioRegistro("form-registro");
+			$formularioRegistro->gestiona();
+			?>
 		</div>
 
 	</div>

@@ -22,12 +22,7 @@ class FormularioRegistro extends Form{
     }
 
     public function procesaFormulario($datos)
-    {
-        if (! isset($_POST['registro']) ) {
-            header('Location: registro.php');
-            exit();
-        }
-        
+    {        
         $erroresFormulario = array();
         
         $nombreUsuario = isset($_POST['nombreUsuario']) ? $_POST['nombreUsuario'] : null;

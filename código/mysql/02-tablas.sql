@@ -31,11 +31,11 @@ USE `ejercicio3`;
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
   `nombreUsuario` varchar(15) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(80) NOT NULL,
-  `rol` varchar(10) NOT NULL
+  `rol` varchar(10) NOT NULL,
+  `imagen` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`nombreUsuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -55,9 +55,6 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

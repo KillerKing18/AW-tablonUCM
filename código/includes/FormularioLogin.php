@@ -16,12 +16,7 @@ class FormularioLogin extends Form{
     }
 
     public function procesaFormulario($datos)
-    {
-        if (! isset($_POST['login']) ) {
-            header('Location: login.php');
-            exit();
-        }
-        
+    {        
         $erroresFormulario = array();
         
         $nombreUsuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
