@@ -3,19 +3,36 @@ body {
 }
 
 div#contenedor {
-	width: 900px;
+	width: 1500px;
 	margin: auto;
 	border: 1px solid black;
 	background-color: #aaaaaa;
 	margin-top: 30px;
 }
 
-div#cabecera {
+div#cabeceraLogin {
 	padding: 30px;
 	height: 100px;
 	background-color: #303030;
 	color: white;
+	text-align: center;
 }
+
+div#cabeceraLogin h1 {
+	text-align: center;
+} 
+
+div#cabecera {
+	padding: 30px;
+	height: 150px;
+	background-color: #303030;
+	color: white;
+	text-align: center;
+}
+
+div#cabecera h1 {
+	text-align: center;
+} 
 
 div#cabecera a, div#cabecera a:visited {
 	color: white;
@@ -29,41 +46,12 @@ div#cabecera a:hover {
 	text-decoration: underline;
 } 
 
-
-div#sidebar-left {
-	padding: 10px;
-	float: left;
-	width: 170px;
-	height: 400px;
-	background-color: #dddddd;
-}
-
-div#sidebar-left a, div#sidebar-left a:visited {
-	color: red;
-	font-weight: bold;
-	text-decoration: none;
-} 
-
-div#sidebar-left a:hover {
-	color: red;
-	text-decoration: underline;
-} 
-
-
-div#sidebar-right {
-	padding: 10px;
-	float: right;
-	width: 170px;
-	height: 400px;
-	background-color: #dddddd;
-}
-
 div#contenido {
 	padding: 10px;
 	float: left;
 	min-height: 600px;
-	width: 500px;
-	background-color: white;
+	width: 1480px;
+	background-color: rgb(165, 201, 170);
 }
 
 div#pie {
@@ -74,9 +62,9 @@ div#pie {
 	text-align: center;
 }
 
-div.saludo {
-	width: 100%;
-	text-align: right;
+.logo {
+	height: 75px;
+	width: 100px;
 }
 
 fieldset .control {
@@ -100,6 +88,10 @@ legend {
 	border: 1px solid black;
 	padding: 2px 6px;
 } 
+
+textarea {
+  resize: none;
+}
 
 label {
 /* 	width: 4em; */
@@ -158,13 +150,13 @@ label {
 .icon-bar {
   width: 100%; /* Full-width */
   background-color: #555; /* Dark-grey background */
-  overflow: auto; /* Overflow due to float */
+  /*overflow: auto; /* Overflow due to float */
 }
 
 .icon-bar a {
   float: left; /* Float links side by side */
   text-align: center; /* Center-align text */
-  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  width: 33.3%; /* Equal width (5 icons with 20% width each = 100%) */
   padding: 12px 0; /* Some top and bottom padding */
   transition: all 0.3s ease; /* Add transition for hover effects */
   color: white; /* White text color */

@@ -6,6 +6,10 @@ require_once __DIR__.'/includes/config.php';
 <link rel="stylesheet" type="text/css" href="estilo.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Portada</title>
+<?php
+if(!isset($_SESSION['login']))
+	header('Location: login.php');
+?>
 </head>
 
 <body>
@@ -14,19 +18,15 @@ require_once __DIR__.'/includes/config.php';
 
 <?php
 	require("includes/comun/cabecera.php");
-	require("includes/comun/sidebarIzq.php");
 ?>
 
 	<div id="contenido">
-		<h1>Página principal</h1>
-		<p> Aquí está el contenido público, visible para todos los usuarios. </p>
+		<h1>Bienvenido a tablónUCM</h1>
+		<p>La página se encuentra actualmente en mantenimiento. Vuelve en un tiempo para ver las novedades.</p>
 	</div>
 
 <?php
-
-	require("includes/comun/sidebarDer.php");
 	require("includes/comun/pie.php");
-
 ?>
 
 

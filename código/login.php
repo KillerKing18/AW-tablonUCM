@@ -15,8 +15,7 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
 <div id="contenedor">
 
 <?php
-	require("includes/comun/cabecera.php");
-	require("includes/comun/sidebarIzq.php");
+	require("includes/comun/cabeceraLogin.php");
 ?>
 
 	<div id="contenido">
@@ -41,7 +40,6 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
 	</div>
 
 <?php
-	require("includes/comun/sidebarDer.php");
 	require("includes/comun/pie.php");
 ?>
 

@@ -1,6 +1,9 @@
 <?php
 require_once __DIR__.'/includes/config.php';
 
+if(!isset($_SESSION['login']))
+	header('Location: login.php');
+	
 //Doble seguridad: unset + destroy
 unset($_SESSION["login"]);
 unset($_SESSION["esAdmin"]);
@@ -21,16 +24,15 @@ session_destroy();
 <div id="contenedor">
 
 <?php
-	require("includes/comun/cabecera.php");
-	require("includes/comun/sidebarIzq.php");
+	require("includes/comun/cabeceraLogin.php");
 ?>
 
 	<div id="contenido">
-		<h1>Hasta pronto!</h1>
+		<h1>Gracias por su visita!</h1>
+		<a href="login.php">Vuelve a iniciar sesión</a>
 	</div>
 
 <?php
-	require("includes/comun/sidebarDer.php");
 	require("includes/comun/pie.php");
 ?>
 

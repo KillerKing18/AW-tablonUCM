@@ -1,3 +1,3 @@
 <div id="pie">
-	Pie de página
+	Copyright © 2019 - tablónUCM
 </div>

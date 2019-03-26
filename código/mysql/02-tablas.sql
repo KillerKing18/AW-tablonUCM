@@ -38,6 +38,31 @@ CREATE TABLE `usuarios` (
   `imagen` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `Universidad` (
+  `id` int(11) NOT NULL,
+  `facultad` varchar(80) NOT NULL,
+  `grado` varchar(80) NOT NULL,
+  `curso` varchar(80) NOT NULL,
+  `asignatura` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `Archivos` (
+  `id` int(11) NOT NULL,
+  `nombreArchivo` varchar(80) NOT NULL,
+  `categoria` varchar(80) NOT NULL,
+  `asignatura` varchar(80) NOT NULL,
+  `curso` varchar(80) NOT NULL,
+  `grado` varchar(80) NOT NULL,
+  `facultad` varchar(80) NOT NULL,
+  `autor` varchar(15) NOT NULL,
+  `observaciones` varchar(140) NOT NULL,
+  `tamano` int(5) NOT NULL,
+  `fecha` varchar(80) NOT NULL,
+  `formato` varchar(80) NOT NULL
+  
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -49,12 +74,35 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`nombreUsuario`);
 
 --
+-- Indices de la tabla `Universidad`
+--
+ALTER TABLE `Universidad`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `Archivos`
+--
+ALTER TABLE `Archivos`
+  ADD PRIMARY KEY (`id`);
+  
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT de la tabla `Universidad`
 --
+ALTER TABLE `Universidad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+--
+-- AUTO_INCREMENT de la tabla `Archivos`
+--
+ALTER TABLE `Archivos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
