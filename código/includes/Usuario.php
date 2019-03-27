@@ -37,12 +37,16 @@ class Usuario
     
     public static function crea($nombreUsuario, $email, $password, $rol)
     {
+        echo "<script>alert('crea')</script>";
         $user = self::buscaUsuario($nombreUsuario);
+        echo "<script>alert('ha buscado')</script>";
         if ($user) {
+            echo "<script>alert('ha encontrado')</script>";
             return false;
         }
+        echo "<script>alert('no ha encontrado, crea usuario')</script>";
         $user = new Usuario($nombreUsuario, $email, self::hashPassword($password), $rol);
-		
+		echo "<script>alert('usuario creado, guarda')</script>";
         return self::guarda($user);
     }
     
@@ -53,6 +57,7 @@ class Usuario
     
     public static function guarda($usuario)
     {
+        echo "<script>alert('guarda, inserta')</script>";
         if ($usuario->id !== null) {
             return self::actualiza($usuario);
         }
@@ -61,6 +66,7 @@ class Usuario
     
     private static function inserta($usuario)
     {
+        echo "<script>alert('inserta')</script>";
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
         $query=sprintf("INSERT INTO Usuarios(nombreUsuario, email, password, rol) VALUES('%s', '%s', '%s', '%s')"
@@ -74,6 +80,7 @@ class Usuario
             echo "Error al insertar en la BD: (" . $conn->errno . ") " . utf8_encode($conn->error);
             exit();
         }
+        echo "<script>alert('vuelve de inserta, base de datos accedida')</script>";
         return $usuario;
     }
     

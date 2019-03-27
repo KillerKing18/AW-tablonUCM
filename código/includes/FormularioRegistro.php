@@ -32,12 +32,14 @@ class FormularioRegistro extends Form{
         $password = isset($_POST['password']) ? $_POST['password'] : null;
 
         $password2 = isset($_POST['password2']) ? $_POST['password2'] : null;
-        
+        echo "<script>alert('" . $nombreUsuario . $email . $password . $password2 "')</script>";
 		$usuario = Usuario::crea($nombreUsuario, $email, $password, 'user');
 		
 		if (! $usuario ) {
+            echo "<script>alert('no se crea usuario')</script>";
 			$erroresFormulario[] = "El usuario ya existe";
 		} else {
+            echo "<script>alert('se crea usuario')</script>";
 			$_SESSION['login'] = true;
 			$_SESSION['nombre'] = $nombreUsuario;
 			header('Location: inicio.php');

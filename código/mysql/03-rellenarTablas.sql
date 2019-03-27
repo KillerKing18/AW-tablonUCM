@@ -1,7 +1,7 @@
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (0,'Facultad de Matemáticas','Grado en Matemáticas','Segundo','Números reales');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (1,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de computadores');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (3,'Facultad de Informática','Grado en Ingeniería Informática','Segundo','Ampliación de matemáticas');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (4,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de programación');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (6,'Facultad de Informática','Grado en Desarrollo de Videojuegos','Primero','Fundamentos de computadores');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (5,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de computadores');
-INSERT INTO `universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (2,'Facultad de Derecho','Grado en Derecho','Tercero','Derecho romano')
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (0,'Facultad de Matemáticas','Grado en Matemáticas','Segundo','Números reales');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (1,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de computadores');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (3,'Facultad de Informática','Grado en Ingeniería Informática','Segundo','Ampliación de matemáticas');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (4,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de programación');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (6,'Facultad de Informática','Grado en Desarrollo de Videojuegos','Primero','Fundamentos de computadores');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (5,'Facultad de Informática','Grado en Ingeniería Informática','Primero','Fundamentos de computadores');
+INSERT INTO `Universidad`(`id`, `facultad`, `grado`, `curso`, `asignatura`) VALUES (2,'Facultad de Derecho','Grado en Derecho','Tercero','Derecho romano')

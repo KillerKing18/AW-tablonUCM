@@ -65,10 +65,13 @@ abstract class Form
      * Se encarga de orquestar todo el proceso de gestión de un formulario.
      */
     public function gestiona()
-    {   
+    {
+        echo "<script>alert('gestiona')</script>";
         if ( ! $this->formularioEnviado($_POST) ) {
+            echo "<script>alert('generaFormulario')</script>";
             echo $this->generaFormulario();
         } else {
+            echo "<script>alert('procesaFormulario')</script>";
             $result = $this->procesaFormulario($_POST);
             if ( is_array($result) ) {
                 echo $this->generaFormulario($result, $_POST);

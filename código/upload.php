@@ -19,10 +19,10 @@ function carga(){
 	document.getElementById("curso").addEventListener("change", habilitarAsignatura, false);
 	document.getElementById("asignatura").addEventListener("change", habilitarCategoria, false);
 }
-function habilitarGrado(){
+function habilitarGrado(e){
 	document.getElementById("grado").disabled = false;
 	<?php
-		$resultado = Universidad::devuelveGrados("Facultad de Matemáticas");
+		$resultado = Universidad::devuelveGrados("Facultad de Informática");
 		$cadena = "<option value='0' disabled selected>Elija un grado</option>";
 		while ($fila = $resultado->fetch_assoc()) {
 			$cadena .= "<option value=" . $fila["grado"] . ">" . $fila["grado"] . "</option>";
@@ -34,7 +34,7 @@ function habilitarGrado(){
 function habilitarCurso(){
 	document.getElementById("curso").disabled = false;
 	<?php
-		$resultado = Universidad::devuelveCursos("Facultad de Matemáticas", "Grado en Matemáticas");
+		$resultado = Universidad::devuelveCursos("Facultad de Informática", "Grado en Ingeniería Informática");
 		$cadena = "<option value='0' disabled selected>Elija un curso</option>";
 		while ($fila = $resultado->fetch_assoc()) {
 			$cadena .= "<option value=" . $fila["curso"] . ">" . $fila["curso"] . "</option>";
@@ -46,7 +46,7 @@ function habilitarCurso(){
 function habilitarAsignatura(){
 	document.getElementById("asignatura").disabled = false;
 	<?php
-		$resultado = Universidad::devuelveAsignaturas("Facultad de Matemáticas", "Grado en Matemáticas", "Segundo");
+		$resultado = Universidad::devuelveAsignaturas("Facultad de Informática", "Grado en Ingeniería Informática", "Segundo");
 		$cadena = "<option value='0' disabled selected>Elija una asignatura</option>";
 		while ($fila = $resultado->fetch_assoc()) {
 			$cadena .= "<option value=" . $fila["asignatura"] . ">" . $fila["asignatura"] . "</option>";

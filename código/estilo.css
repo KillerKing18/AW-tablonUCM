@@ -3,7 +3,7 @@ body {
 }
 
 div#contenedor {
-	width: 1500px;
+	width: 90%;
 	margin: auto;
 	border: 1px solid black;
 	background-color: #aaaaaa;
@@ -11,6 +11,7 @@ div#contenedor {
 }
 
 div#cabeceraLogin {
+	display: flex;
 	padding: 30px;
 	height: 100px;
 	background-color: #303030;
@@ -48,9 +49,6 @@ div#cabecera a:hover {
 
 div#contenido {
 	padding: 10px;
-	float: left;
-	min-height: 600px;
-	width: 1480px;
 	background-color: rgb(165, 201, 170);
 }
 

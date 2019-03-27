@@ -30,7 +30,7 @@ USE `ejercicio3`;
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
+CREATE TABLE `Usuarios` (
   `nombreUsuario` varchar(15) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(80) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `Archivos` (
 --
 -- Indices de la tabla `usuarios`
 --
-ALTER TABLE `usuarios`
+ALTER TABLE `Usuarios`
   ADD PRIMARY KEY (`nombreUsuario`);
 
 --
