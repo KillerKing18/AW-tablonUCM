@@ -1,0 +1,170 @@
+body {
+	background-color: #CDCDCD;
+}
+
+div#contenedor {
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+	background-color: #aaaaaa;
+	margin-top: 30px;
+}
+
+div#cabeceraLogin {
+	display: flex;
+	padding: 30px;
+	height: 100px;
+	background-color: #303030;
+	color: white;
+	text-align: center;
+}
+
+div#cabeceraLogin h1 {
+	text-align: center;
+} 
+
+div#cabecera {
+	padding: 30px;
+	height: 150px;
+	background-color: #303030;
+	color: white;
+	text-align: center;
+}
+
+div#cabecera h1 {
+	text-align: center;
+} 
+
+div#cabecera a, div#cabecera a:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+} 
+
+div#cabecera a:hover {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+} 
+
+div#contenido {
+	padding: 10px;
+	background-color: rgb(165, 201, 170);
+}
+
+div#pie {
+	clear: both;
+	padding: 20px;
+	background-color: #303030;
+	color: white;
+	text-align: center;
+}
+
+.logo {
+	height: 75px;
+	width: 100px;
+}
+
+fieldset .control {
+	width: 100%;
+}
+
+fieldset .grupo-control {
+	margin: 5px;
+}
+
+
+fieldset {
+	border: 1px solid black;
+	width: 80%;
+	margin: 0 auto;
+}
+
+legend {
+	color: #fff;
+	background: #303030;
+	border: 1px solid black;
+	padding: 2px 6px;
+} 
+
+textarea {
+  resize: none;
+}
+
+label {
+/* 	width: 4em; */
+/*	float: left; */
+/* 	text-align: right; */
+	margin-right: 0.5em;
+	display: block;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  /*overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 33.3%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #4CAF50; /* Add an active/current color */
+}
