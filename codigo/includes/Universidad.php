@@ -3,7 +3,7 @@ require_once __DIR__ . '/Aplicacion.php';
 
 class Universidad
 {
-    public static function devuelveFacultades()
+    private static function devuelveFacultades()
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
@@ -14,6 +14,16 @@ class Universidad
             exit();
         }
         return $rs;
+    }
+
+    public static function creaOpcionesFacultades(){
+        $resultado = Universidad::devuelveFacultades();
+		$options = '<option value="0" disabled selected>Elija una facultad</option>';
+		while ($fila = $resultado->fetch_assoc()) {
+			$options .= '<option value="' . $fila["facultad"] . '">' . $fila["facultad"] . '</option>';
+		}
+        $resultado->free();
+        return $options;
     }
 
     public static function devuelveGrados($facultad)
@@ -27,6 +37,16 @@ class Universidad
             exit();
         }
         return $rs;
+    }
+
+    public static function creaOpcionesGrados($facultad){
+        $resultado = Universidad::devuelveGrados();
+		$options = '<option value="0" disabled selected>Elija un grado</option>';
+		while ($fila = $resultado->fetch_assoc()) {
+			$options .= '<option value="' . $fila["grado"] . '">' . $fila["grado"] . '</option>';
+		}
+        $resultado->free();
+        return $options;
     }
 
     public static function devuelveCursos($facultad, $grado)

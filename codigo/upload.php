@@ -14,12 +14,17 @@ if(isset($_FILES['archivo'])){
 		$file_tmp = $_FILES['archivo']['tmp_name'];
 		$tmp_file_ext = explode('.',$file_name);
 		$file_ext = strtolower(end($tmp_file_ext));
-		
+
 		if(!file_exists('archivos')){
-			mkdir('archivos', 0777, true);
+			if(mkdir('archivos', 0777, true))
+				echo "<script type='text/javascript'>alert('Se ha creado una carpeta nueva');</script>";
+			else
+				echo "<script type='text/javascript'>alert('No se ha podido crear la carpeta');</script>";
 		}
-		move_uploaded_file($file_tmp,"archivos/".$file_name);
-		echo "<script type='text/javascript'>alert('Archivo subido correctamente');</script>";
+		if(move_uploaded_file($file_tmp,"archivos/".$file_name))
+			echo "<script type='text/javascript'>alert('Archivo subido correctamente');</script>";
+		else
+			echo "<script type='text/javascript'>alert('Se ha producido un error al subir el archivo');</script>";
 		break;
 	case 4:
 		echo "<script type='text/javascript'>alert('No se subió ningún fichero.');</script>";
@@ -51,6 +56,7 @@ function vaciarCampos(){
 	document.getElementById("asignatura").disabled = true;
 	document.getElementById("categoria").disabled = true;
 }
+
 </script>
 
 </head>
@@ -72,13 +78,9 @@ function vaciarCampos(){
 			<form action = "" name="campos" method="post" enctype="multipart/form-data"> 
 				<label>Facultad</label>
 				<select name="facultad" id="facultad">
-					<option value="0" disabled selected>Elija una facultad</option>
 					<?php
-						$resultado = Universidad::devuelveFacultades();
-						while ($fila = $resultado->fetch_assoc()) {
-							echo '<option value="' . $fila["facultad"] . '">' . $fila["facultad"] . '</option>';
-						}
-						$resultado->free();
+						$options = Universidad::creaOpcionesFacultades();
+						echo "<script type='text/javascript'>document.getElementById('facultad').innerHTML = '" . $options . "';</script>";
 					?>
 				</select>
 				<label>Grado</label>
@@ -98,7 +100,7 @@ function vaciarCampos(){
 					<option value="0" disabled selected>Elija una categoría</option>
 				</select>
 				<button id="actualizar" type="submit">Actualizar</button>
-				<button onclick="return vaciarCampos();" type="submit">Vaciar</button>
+				<button onclick="vaciarCampos();" type="submit">Vaciar</button>
 				<label>Observaciones</label>
 				<textarea rows="4" cols="50"></textarea>
 				<input type="file" name="archivo">
