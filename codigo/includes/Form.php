@@ -115,7 +115,7 @@ abstract class Form
     private function formularioEnviado(&$params)
     {
         return isset($params['action']) && $params['action'] == $this->formId;
-    } 
+    }
 
     /**
      * Función que genera el HTML necesario para el formulario.
@@ -128,15 +128,23 @@ abstract class Form
      */
     private function generaFormulario($errores = array(), &$datos = array())
     {
-
         $html= $this->generaListaErrores($errores);
 
-        $html .= '<form method="POST" action="'.$this->action.'" id="'.$this->formId.'" >';
+        $html .= '<form method="POST" action="'.$this->action.'" ' . $this->atributoCabeceraFormulario() . 'id="'.$this->formId.'" >';
         $html .= '<input type="hidden" name="action" value="'.$this->formId.'" />';
 
         $html .= $this->generaCamposFormulario($datos);
         $html .= '</form>';
         return $html;
+    }
+
+    /**
+     * Añade un atributo a la cabecera del formulario.
+     *
+     */
+    protected function atributoCabeceraFormulario()
+    {
+        return '';
     }
 
     /**

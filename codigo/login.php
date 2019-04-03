@@ -5,47 +5,49 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="estilo.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Login</title>
 </head>
 
 <body>
 
-<div id="contenedor">
+    <div id="contenedor">
 
-<?php
+        <?php
 	require("includes/comun/cabeceraLogin.php");
 ?>
 
-	<div id="contenido">
-		<div class="tab">
-		  <button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-		  <button class="tablinks" onclick="openTab(event, 'Registro')">Registro</button>
-		</div>
-		
-		<div id="Login" class="tabcontent">
-			<?php
+        <div id="contenido">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'Registro')">Registro</button>
+            </div>
+
+            <div id="Login" class="tabcontent">
+                <?php
 			$formularioLogin = new FormularioLogin("form-login", array( 'action' => 'login.php'));
 			$formularioLogin->gestiona();
 			?>
-		</div>
-		<div id="Registro" class="tabcontent">
-			<?php
+            </div>
+            <div id="Registro" class="tabcontent">
+                <?php
 			$formularioRegistro = new FormularioRegistro("form-registro", array( 'action' => 'login.php'));
 			$formularioRegistro->gestiona();
 			?>
-		</div>
+            </div>
 
-	</div>
+        </div>
 
-<?php
+        <?php
 	require("includes/comun/pie.php");
 ?>
 
 
-</div>
-<script  src="js/tab.js"></script>
+    </div>
+    <script src="js/tab.js"></script>
 </body>
+
 </html>

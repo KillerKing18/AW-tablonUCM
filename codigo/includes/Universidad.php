@@ -26,7 +26,7 @@ class Universidad
         return $options;
     }
 
-    public static function devuelveGrados($facultad)
+    private static function devuelveGrados($facultad)
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
@@ -40,16 +40,16 @@ class Universidad
     }
 
     public static function creaOpcionesGrados($facultad){
-        $resultado = Universidad::devuelveGrados();
+        $resultado = Universidad::devuelveGrados($facultad);
 		$options = '<option value="0" disabled selected>Elija un grado</option>';
 		while ($fila = $resultado->fetch_assoc()) {
 			$options .= '<option value="' . $fila["grado"] . '">' . $fila["grado"] . '</option>';
 		}
         $resultado->free();
-        return $options;
+        echo $options;
     }
 
-    public static function devuelveCursos($facultad, $grado)
+    private static function devuelveCursos($facultad, $grado)
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
@@ -64,7 +64,17 @@ class Universidad
         return $rs;
     }
 
-    public static function devuelveAsignaturas($facultad, $grado, $curso)
+    public static function creaOpcionesCursos($facultad, $grado){
+        $resultado = Universidad::devuelveCursos($facultad, $grado);
+		$options = '<option value="0" disabled selected>Elija un curso</option>';
+		while ($fila = $resultado->fetch_assoc()) {
+			$options .= '<option value="' . $fila["curso"] . '">' . $fila["curso"] . '</option>';
+		}
+        $resultado->free();
+        echo $options;
+    }
+
+    private static function devuelveAsignaturas($facultad, $grado, $curso)
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
@@ -80,4 +90,13 @@ class Universidad
         return $rs;
     }
 
+    public static function creaOpcionesAsignaturas($facultad, $grado, $curso){
+        $resultado = Universidad::devuelveAsignaturas($facultad, $grado, $curso);
+		$options = '<option value="0" disabled selected>Elija una asignatura</option>';
+		while ($fila = $resultado->fetch_assoc()) {
+			$options .= '<option value="' . $fila["asignatura"] . '">' . $fila["asignatura"] . '</option>';
+		}
+        $resultado->free();
+        echo $options;
+    }
 }
