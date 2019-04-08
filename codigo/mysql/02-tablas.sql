@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ejercicio3`
+-- Base de datos: `tablonucm`
 --
-CREATE DATABASE IF NOT EXISTS `ejercicio3` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `ejercicio3`;
+CREATE DATABASE IF NOT EXISTS `tablonucm` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `tablonucm`;
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `archivos` (
   `facultad` varchar(80) NOT NULL,
   `autor` varchar(15) NOT NULL,
   `observaciones` varchar(140) NOT NULL,
-  `tamano` int(5) NOT NULL,
+  `tamano` int(15) NOT NULL,
   `fecha` varchar(80) NOT NULL,
   `formato` varchar(80) NOT NULL
   

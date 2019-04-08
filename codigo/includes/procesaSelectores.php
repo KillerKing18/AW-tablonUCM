@@ -1,20 +1,24 @@
 <?php
-require_once __DIR__.'/includes/Universidad.php';
+require_once __DIR__.'/config.php';
+require_once __DIR__.'/Universidad.php';
 
-$caso = isset($_POST['caso']) ? $_POST['caso'] : null;
+$caso = $_POST['caso'];
 $facultad = isset($_POST['facultad']) ? $_POST['facultad'] : null;
 $grado = isset($_POST['grado']) ? $_POST['grado'] : null;
 $curso = isset($_POST['curso']) ? $_POST['curso'] : null;
 $result = '';
 switch($caso){
-    case 'grado':
+    case 'facultad':
         $result = Universidad::creaOpcionesGrados($facultad);
     break;
-    case 'curso':
+    case 'grado':
         $result = Universidad::creaOpcionesCursos($facultad, $grado);
     break;
-    case 'asignatura':
+    case 'curso':
         $result = Universidad::creaOpcionesAsignaturas($facultad, $grado, $curso);
+    break;
+    case 'asignatura':
+        $result = Universidad::creaOpcionesCategorias();
     break;
 }
 echo $result;

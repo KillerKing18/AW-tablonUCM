@@ -1,5 +1,2 @@
-CREATE USER 'ejercicio3'@'%' IDENTIFIED BY 'ejercicio3';
-GRANT ALL PRIVILEGES ON `ejercicio3`.* TO 'ejercicio3'@'%';
-
-CREATE USER 'ejercicio3'@'localhost' IDENTIFIED BY 'ejercicio3';
-GRANT ALL PRIVILEGES ON `ejercicio3`.* TO 'ejercicio3'@'localhost';
+CREATE USER 'tablonucm'@'localhost' IDENTIFIED BY 'tablonucm';
+GRANT ALL PRIVILEGES ON tablonucm.* TO 'tablonucm'@'localhost';

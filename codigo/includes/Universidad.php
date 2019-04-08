@@ -46,7 +46,7 @@ class Universidad
 			$options .= '<option value="' . $fila["grado"] . '">' . $fila["grado"] . '</option>';
 		}
         $resultado->free();
-        echo $options;
+        return $options;
     }
 
     private static function devuelveCursos($facultad, $grado)
@@ -71,7 +71,7 @@ class Universidad
 			$options .= '<option value="' . $fila["curso"] . '">' . $fila["curso"] . '</option>';
 		}
         $resultado->free();
-        echo $options;
+        return $options;
     }
 
     private static function devuelveAsignaturas($facultad, $grado, $curso)
@@ -97,6 +97,15 @@ class Universidad
 			$options .= '<option value="' . $fila["asignatura"] . '">' . $fila["asignatura"] . '</option>';
 		}
         $resultado->free();
-        echo $options;
+        return $options;
+    }
+
+    public static function creaOpcionesCategorias(){
+		$options = '<option value="0" disabled selected>Elija una categoría</option>';
+        $options .= '<option value="Teoría">Teoría</option>';
+        $options .= '<option value="Ejercicios">Ejercicios</option>';
+        $options .= '<option value="Exámenes">Exámenes</option>';
+        $options .= '<option value="Prácticas">Prácticas</option>';
+        return $options;
     }
 }

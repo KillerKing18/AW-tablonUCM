@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__.'/includes/config.php';
-require_once __DIR__.'/includes/FormularioUpload.php';
+require_once __DIR__.'/includes/FormularioBusqueda.php';
 if(!isset($_SESSION['login']))
 	header('Location: login.php');
 ?>
@@ -10,16 +10,9 @@ if(!isset($_SESSION['login']))
 <head>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Upload</title>
+    <title>Buscar</title>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/selectoresUpload.js"></script>
-<!--	
-	setCustomValidity
-	onBlur
-	onSubmit
-	pattern
-	integrity 
--->
+    <script type="text/javascript" src="js/selectoresBusqueda.js"></script>
 </head>
 
 <body>
@@ -28,15 +21,14 @@ if(!isset($_SESSION['login']))
 			require("includes/comun/cabecera.php");
 		?>
         <div id="contenido">
-            <h1>Sube tus apuntes</h1>
+            <h1>Busca tus apuntes</h1>
             <div class="info">
-                <p> Sólo se puede subir 1 único archivo. Si necesitas subir varios archivos para que tu contenido sea
-                    consistente, puedes comprimirlos en un archivo .zip o .rar </p>
+                <p> Desde aquí podrás buscar los archivos que necesites </p>
             </div>
             <div class="formulario">
 				<?php
-					$formularioUpload = new FormularioUpload("form-upload", array( 'action' => 'upload.php'));
-					$formularioUpload->gestiona();
+					$formularioBusqueda = new FormularioBusqueda("form-search", array( 'action' => 'buscador.php'));
+					$formularioBusqueda->gestiona();
 				?>
             </div>
         </div>

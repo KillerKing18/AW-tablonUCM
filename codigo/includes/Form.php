@@ -130,7 +130,7 @@ abstract class Form
     {
         $html= $this->generaListaErrores($errores);
 
-        $html .= '<form method="POST" action="'.$this->action.'" ' . $this->atributoCabeceraFormulario() . 'id="'.$this->formId.'" >';
+        $html .= '<form method="POST" action="'.$this->action.'" id="'.$this->formId.'" >';
         $html .= '<input type="hidden" name="action" value="'.$this->formId.'" />';
 
         $html .= $this->generaCamposFormulario($datos);
@@ -138,14 +138,6 @@ abstract class Form
         return $html;
     }
 
-    /**
-     * Añade un atributo a la cabecera del formulario.
-     *
-     */
-    protected function atributoCabeceraFormulario()
-    {
-        return '';
-    }
 
     /**
      * Genera la lista de mensajes de error a incluir en el formulario.

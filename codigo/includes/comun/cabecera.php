@@ -7,6 +7,7 @@
 	<div class="icon-bar">
 	  <a class="active" href="././inicio.php"><i class="fa fa-home"></i></a> 
 	  <a href="././upload.php"><i class="fa fa-upload"></i></a>
+		<a href="././buscador.php"><i class="fa fa-search"></i></a>
 	  <a href="././logout.php"><i class="fa fa-envelope"></i></a>
 	</div>
 </div>
