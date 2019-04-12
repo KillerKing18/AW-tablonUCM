@@ -26,23 +26,3 @@ $app->init(array('host'=>BD_HOST, 'bd'=>BD_NAME, 'user'=>BD_USER, 'pass'=>BD_PAS
  * @see http://php.net/manual/en/language.types.callable.php
  */
 register_shutdown_function(array($app, 'shutdown'));
-
-
-function borrarArchivos($folder){
-    //Get a list of all of the file names in the folder.
-    $files = glob($folder . '/*');
-    
-    //Loop through the file list.
-    foreach($files as $file){
-        //Make sure that this is a file and not a directory.
-        if(is_file($file))
-            //Use the unlink function to delete the file.
-            unlink($file);
-        else
-            borrarArchivos($file);
-    }
-    if($folder !== 'zip')
-        rmdir($folder);
-}
-
-borrarArchivos('zip');

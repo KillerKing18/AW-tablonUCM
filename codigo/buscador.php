@@ -2,7 +2,8 @@
 require_once __DIR__.'/includes/config.php';
 require_once __DIR__.'/includes/FormularioBusqueda.php';
 if(!isset($_SESSION['login']))
-	header('Location: login.php');
+    header('Location: login.php');
+    $_SESSION['seccion'] = 'buscador';
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,8 +12,9 @@ if(!isset($_SESSION['login']))
     <link rel="stylesheet" type="text/css" href="estilo.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Buscar</title>
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/selectoresBusqueda.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/cabecera.js"></script>
+    <script type="text/javascript" src="js/selectores.js"></script>
 </head>
 
 <body>

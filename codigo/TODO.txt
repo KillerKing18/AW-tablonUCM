@@ -1,0 +1,44 @@
+// Observaciones
+Usuario: Enriqueta123
+Password: usuar1O
+
+Usuario: ViniciusJr
+Password: Vinicius28
+
+La validación con JQuery a veces tarda y hay que esperar 1 segundo. De todas formas, hay doble validación usando PHP. (sobre todo falla al registrarse con un nombre de usuario ya existente y al cambiarse el nombre de usuario por otro que también exista y darle a enviar el formulario rápidamente justo después de escribir el último carácter en el nombre de usuario que hace que coincida con uno que ya existe)
+
+// Retoques funcionales para esta práctica
+Aviso de que se ha cambiado el email, el usuario, la contraseña o la imagen y de que se ha subido un archivo.
+
+// Funcionalidades para esta práctica
+Borrar archivo (¿solamente en el perfil?) (asi nos ahorramos hacerlo en el buscador tambien)
+Editar archivos (añadir un icono al lado de cada archivo con JQuery) (nombre y observaciones)
+Valoración de archivos
+Valoración de usuarios
+Descargar zips
+Descargar archivos (y editar) sin tener que ir a la página del archivo en concreto
+
+// Vistas para esta práctica
+Subir evento
+Evento en concreto
+Página principal (no sé si la que está vale o hay que añadir cosas)
+Foro (?)
+Reportes del administrador
+
+// CSS de esta práctica
+ABSOLUTAMENTE TODO
+Adobe Color
+
+
+// Funcionalidades para la siguiente práctica
+Marcar asignaturas
+Eventos y asistentes (JQuery datepicker)
+Reportes en archivos, comentarios y eventos
+Comentarios
+Vistas del administrador (habilitar borrado en páginas de eventos, perfiles y archivos)
+Página principal con cosas interesantes para el usuario
+
+// Posibles utilidades para un futuro
+http_response_code para devolver un status que queramos al usar Ajax
+Usar json_encode y json_decode para transformar objetos entre PHP y JavaScript
+JQuery.map()

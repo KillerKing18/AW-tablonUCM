@@ -1,17 +1,16 @@
 <?php
-require_once __DIR__.'/includes/config.php';
+	require_once __DIR__.'/includes/config.php';
 
-if(!isset($_SESSION['login']))
-	header('Location: login.php');
-	
-//Doble seguridad: unset + destroy
-unset($_SESSION["login"]);
-unset($_SESSION["esAdmin"]);
-unset($_SESSION["nombre"]);
-
-
-session_destroy();
-?><!DOCTYPE html>
+	if(!isset($_SESSION['login']))
+		header('Location: login.php');
+		
+	//Doble seguridad: unset + destroy
+	unset($_SESSION["login"]);
+	unset($_SESSION["esAdmin"]);
+	unset($_SESSION["nombre"]);
+	session_destroy();
+?>
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="estilo.css" />

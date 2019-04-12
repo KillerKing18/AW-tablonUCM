@@ -3,6 +3,7 @@ body {
 }
 
 div#contenedor {
+	border-radius: 25px;
 	width: 90%;
 	margin: auto;
 	border: 1px solid black;
@@ -11,7 +12,11 @@ div#contenedor {
 }
 
 div#cabeceraLogin {
+	border-radius: 25px 25px 0px 0px;
 	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
 	padding: 30px;
 	height: 100px;
 	background-color: #303030;
@@ -19,20 +24,34 @@ div#cabeceraLogin {
 	text-align: center;
 }
 
+div#cabeceraLogin img {
+  padding-right: 30px;
+} 
+
 div#cabeceraLogin h1 {
 	text-align: center;
 } 
 
 div#cabecera {
+	border-radius: 25px 25px 0px 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 	padding: 30px;
-	height: 150px;
 	background-color: #303030;
 	color: white;
-	text-align: center;
 }
 
-div#cabecera h1 {
-	text-align: center;
+div#nombreylogo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+div#nombreylogo img {
+  padding-right: 30px;
 } 
 
 div#cabecera a, div#cabecera a:visited {
@@ -49,10 +68,11 @@ div#cabecera a:hover {
 
 div#contenido {
 	padding: 10px;
-	background-color: rgb(165, 201, 170);
+	background-color: #4FE8A1;
 }
 
 div#pie {
+	border-radius: 0px 0px 25px 25px;
 	clear: both;
 	padding: 20px;
 	background-color: #303030;
@@ -146,18 +166,26 @@ label {
 }
 
 .icon-bar {
-  width: 100%; /* Full-width */
-  background-color: #555; /* Dark-grey background */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+  width: 50%; /* Full-width */
   /*overflow: auto; /* Overflow due to float */
 }
 
 .icon-bar a {
-  float: left; /* Float links side by side */
+	border-radius: 10px;
   text-align: center; /* Center-align text */
-  width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+  width: 14.28%; /* Equal width (5 icons with 20% width each = 100%) */
   padding: 12px 0; /* Some top and bottom padding */
   transition: all 0.3s ease; /* Add transition for hover effects */
   color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar i {
+	color: white; /* White text color */
   font-size: 36px; /* Increased font size */
 }
 
@@ -166,5 +194,14 @@ label {
 }
 
 .active {
-  background-color: #4CAF50; /* Add an active/current color */
+  background-color: #4FE8A1; /* Add an active/current color */
+}
+
+.borrarArchivo {
+  background-color: rgb(90, 155, 180);
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
 }

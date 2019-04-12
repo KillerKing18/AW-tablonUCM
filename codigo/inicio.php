@@ -2,13 +2,16 @@
 require_once __DIR__.'/includes/config.php';
 if(!isset($_SESSION['login']))
 	header('Location: login.php');
+$_SESSION['seccion'] = 'inicio';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="estilo.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Portada</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Portada</title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/cabecera.js"></script>
 </head>
 
 <body>

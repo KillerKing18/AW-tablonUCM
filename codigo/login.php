@@ -10,6 +10,8 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
     <link rel="stylesheet" type="text/css" href="estilo.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Login</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/validacion.js"></script>
 </head>
 
 <body>
@@ -28,15 +30,15 @@ require_once __DIR__.'/includes/FormularioRegistro.php';
 
             <div id="Login" class="tabcontent">
                 <?php
-			$formularioLogin = new FormularioLogin("form-login", array( 'action' => 'login.php'));
-			$formularioLogin->gestiona();
-			?>
+                    $formularioLogin = new FormularioLogin("form-login", array( 'action' => 'login.php'));
+                    $formularioLogin->gestiona();
+                ?>
             </div>
             <div id="Registro" class="tabcontent">
                 <?php
-			$formularioRegistro = new FormularioRegistro("form-registro", array( 'action' => 'login.php'));
-			$formularioRegistro->gestiona();
-			?>
+                    $formularioRegistro = new FormularioRegistro("form-registro", array( 'action' => 'login.php'));
+                    $formularioRegistro->gestiona();
+                ?>
             </div>
 
         </div>

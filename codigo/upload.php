@@ -2,7 +2,8 @@
 require_once __DIR__.'/includes/config.php';
 require_once __DIR__.'/includes/FormularioUpload.php';
 if(!isset($_SESSION['login']))
-	header('Location: login.php');
+    header('Location: login.php');
+$_SESSION['seccion'] = 'upload';
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,14 +13,8 @@ if(!isset($_SESSION['login']))
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Upload</title>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/selectoresUpload.js"></script>
-<!--	
-	setCustomValidity
-	onBlur
-	onSubmit
-	pattern
-	integrity 
--->
+    <script type="text/javascript" src="js/selectores.js"></script>
+    <script type="text/javascript" src="js/cabecera.js"></script>
 </head>
 
 <body>

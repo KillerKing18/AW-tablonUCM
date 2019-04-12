@@ -11,20 +11,20 @@ class FormularioBusqueda extends Form{
 		$options = Universidad::creaOpcionesFacultades();
 
         return  '<label>Facultad</label>
-                <select name="facultad" class="selector" id="facultad">'
+                <select name="facultad" class="selector" id="facultad" required>'
                 . $options .
                 '</select>
                 <label>Grado</label>
-                <select name="grado" class="selector" id="grado" disabled>
-                    <option value="0" disabled selected>Elija un grado</option>
+                <select name="grado" class="selector" id="grado" disabled required>
+                    <option value="" disabled selected>Elija un grado</option>
                 </select>
                 <label>Curso</label>
-                <select name="curso" class="selector" id="curso" disabled>
-                    <option value="0" disabled selected>Elija un curso</option>
+                <select name="curso" class="selector" id="curso" disabled required>
+                    <option value="" disabled selected>Elija un curso</option>
                 </select>
                 <label>Asignatura</label>
-                <select name="asignatura" class="selector" id="asignatura" disabled>
-                    <option value="0" disabled selected>Elija una asignatura</option>
+                <select name="asignatura" class="selector" id="asignatura" disabled required>
+                    <option value="" disabled selected>Elija una asignatura</option>
                 </select>
                 <button type="submit" id="buscar">Buscar</button>';
     }
@@ -36,7 +36,7 @@ class FormularioBusqueda extends Form{
         $grado = $_REQUEST['grado'];
         $curso = $_REQUEST['curso'];
         $asignatura = $_REQUEST['asignatura'];
-        echo '<script>document.location.href = "resultado.php?facultad=' . $facultad . '&grado=' . $grado . '&curso=' . $curso . '&asignatura=' . $asignatura . '";</script>';
+        echo '<script>document.location.href = "resultadoApuntes.php?facultad=' . $facultad . '&grado=' . $grado . '&curso=' . $curso . '&asignatura=' . $asignatura . '";</script>';
         return $erroresFormulario;
     }
 }

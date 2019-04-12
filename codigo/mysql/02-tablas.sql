@@ -35,7 +35,8 @@ CREATE TABLE `usuarios` (
   `email` varchar(40) NOT NULL,
   `password` varchar(80) NOT NULL,
   `rol` varchar(10) NOT NULL,
-  `imagen` varchar(40)
+  `imagen` boolean NOT NULL,
+  `extensionImagen` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `universidad` (
@@ -43,7 +44,8 @@ CREATE TABLE `universidad` (
   `facultad` varchar(80) NOT NULL,
   `grado` varchar(80) NOT NULL,
   `curso` varchar(80) NOT NULL,
-  `asignatura` varchar(80) NOT NULL
+  `asignatura` varchar(80) NOT NULL,
+  `zip` boolean NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `archivos` (
@@ -59,8 +61,18 @@ CREATE TABLE `archivos` (
   `tamano` int(15) NOT NULL,
   `fecha` varchar(80) NOT NULL,
   `formato` varchar(80) NOT NULL
-  
-  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `valoracionesarchivos` (
+  `idArchivo` int(11) NOT NULL,
+  `usuarioEmisor` varchar(15) NOT NULL,
+  `puntuacion` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `valoracionesusuarios` (
+  `usuarioReceptor` varchar(15) NOT NULL,
+  `usuarioEmisor` varchar(15) NOT NULL,
+  `puntuacion` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -84,8 +96,19 @@ ALTER TABLE `universidad`
 --
 ALTER TABLE `archivos`
   ADD PRIMARY KEY (`id`);
-  
 
+--
+-- Indices de la tabla `valoracionesarchivos`
+--
+ALTER TABLE `valoracionesarchivos`
+  ADD PRIMARY KEY (`idArchivo`, `usuarioEmisor`);
+
+--
+-- Indices de la tabla `valoracionesusuarios`
+--
+ALTER TABLE `valoracionesusuarios`
+  ADD PRIMARY KEY (`usuarioReceptor`, `usuarioEmisor`);
+  
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
@@ -103,6 +126,41 @@ COMMIT;
 ALTER TABLE `archivos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+--
+-- Claves foráneas de la tabla `archivos`
+--
+ALTER TABLE `archivos` 
+  ADD FOREIGN KEY (`autor`) 
+  REFERENCES `usuarios`(`nombreUsuario`)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE;
+
+--
+-- Claves foráneas de la tabla `valoracionesarchivos`
+--
+ALTER TABLE `valoracionesarchivos` 
+  ADD FOREIGN KEY (`usuarioEmisor`) 
+  REFERENCES `usuarios`(`nombreUsuario`)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
+  ADD FOREIGN KEY (`idArchivo`) 
+  REFERENCES `archivos`(`id`)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE;
+
+--
+-- Claves foráneas de la tabla `valoracionesusuarios`
+--
+ALTER TABLE `valoracionesusuarios` 
+  ADD FOREIGN KEY (`usuarioEmisor`) 
+  REFERENCES `usuarios`(`nombreUsuario`)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
+  ADD FOREIGN KEY (`usuarioReceptor`) 
+  REFERENCES `usuarios`(`nombreUsuario`)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
